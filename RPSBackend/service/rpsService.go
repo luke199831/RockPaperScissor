@@ -61,7 +61,7 @@ func (rps *RPSService) UpdateScore(id int, userRPS string) (int, error) {
 		} else if userRPS == "scissor" && sysRPS[i] == "paper" {
 			user.Score += 1
 		} else {
-			user.Score -= 1
+			user.Score = user.Score
 		}
 
 	} else {
